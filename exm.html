@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Auto Scrolling Banner</title>
+  <style>
+    .scroll-container {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+      background-color: #fff;
+      padding: 20px 0;
+    }
+
+    .scroll-content {
+      display: flex;
+      width: max-content;
+      animation: scroll-left 20s linear infinite;
+    }
+
+    .scroll-content img {
+      height: 300px; /* Adjust as needed */
+      object-fit: cover;
+    }
+
+    @keyframes scroll-left {
+      from {
+        transform: translateX(0%);
+      }
+      to {
+        transform: translateX(-50%);
+      }
+    }
+
+    /* Duplicate the image to allow seamless scroll */
+    .scroll-content > * {
+      flex-shrink: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="scroll-container">
+    <div class="scroll-content">
+      <!-- Replace this with the correct path to your image -->
+      <img src="C:\xampp\htdocs\website\images\Studio\design.jpg" alt="Scrolling Image">
+      <img src="C:\xampp\htdocs\website\images\Studio\design.jpg" alt="Scrolling Image">
+    </div>
+  </div>
+
+</body>
+</html>

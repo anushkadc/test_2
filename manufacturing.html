@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SPID4</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baumans&family=Eagle+Lake&family=Estonia&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Saira:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+ 
+
+
+<!-- AOS CSS -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<style>
+
+  body{
+    margin-top: 100px;
+  }
+ 
+  .manufacturing-section {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 50px 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 50px;
+  color: #1d3557;
+
+}
+.manu_head{
+   text-align: center;
+    color: #183B4E;
+    font-size: 2.8rem;
+    font-weight: 700;
+   
+    
+   margin-top:130px ;
+}
+
+.stepper {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.step {
+  display: flex;
+  flex-wrap: wrap;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.step-image {
+ width: 500px;
+ height: auto;
+ text-align: center;
+ margin: 10px;
+}
+.step-image-processing{
+  width:500px;
+  height: auto;
+  text-align: center;
+  margin: 10px;
+}
+.step-image-processing img{
+  width:100%;
+  height: auto;
+  object-fit: contain;
+  text-align: center;
+}
+
+
+.step-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  text-align: center;
+
+}
+
+.step-content {
+  flex: 2 1 400px;
+  padding: 30px;
+}
+
+.step-content h2 {
+  color: #183B4E;
+  margin-bottom: 15px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+
+.step-content ul {
+  padding-left: 20px;
+}
+
+.step-content li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.step {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s ease;
+}
+
+.step.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.step {
+  opacity: 0;
+  transform: scale(0.85);
+  transition: all 0.8s ease;
+}
+
+.step.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+@media screen and (max-width: 1024px) {
+  .step-image, .step-image-processing {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .step-image img, .step-image-processing img {
+    width: 90%;
+    height: auto;
+    object-fit: contain;
+  }
+
+}
+
+
+
+
+</style>
+
+</head>
+
+
+
+<body>
+  <header>
+   
+    <div class="logo">
+          <a href="index.html"><img src="images\logoSPID.png"></a>
+        </div>
+ <div class="nav_box">
+   <button class="hamburger" onclick="toggleMenu()">☰</button>
+    <nav class="navbar" id="navbar">
+      <a href="home.html">Home</a>
+      <div class="dropdown">
+        <span class="dropdown-label" onclick="toggleDropdown(this)">About
+          <span class="arrow">&#9662;</span>
+        </span>
+
+        <div class="dropdown-content">
+          <a href="aboutUS.html#aboutspid">About Us</a>
+          <a href="aboutUS.html#Founders">Founders</a>
+          <a href="aboutUS.html#Achievements">Achievements</a>
+          <a href="aboutUS.html#Certificates">Certificates</a>
+        </div>
+      </div>
+    <div class="dropdown">
+  <span class="dropdown-label" onclick="toggleDropdown(this)">Products
+    <span class="arrow">&#9662;</span>
+  </span>
+ <div class="dropdown-content">
+    <a href="Products.html#Fabrics">Fabrics </a>
+    <a href="Products.html#Trad">Traditional Wear</a>
+    <a href="Products.html#ApparelRange">Apparels</a>
+    <a href="Products.html#homeL">Home Linen</a>
+    <a href="Products.html#value">Value Addition</a>
+  </div>
+</div>
+
+      <a href="manufacturing.html">Manufacturing</a>
+     <a href="Studio.html">Studio</a>
+      <a href="markets.html">Global Reach</a>
+      <a href="Events.html">Events</a>
+      <a href="ContactUs.html">Contact Us</a>
+      
+    </nav>
+ 
+</div>
+</header>
+  <!--color strip option
+ <div class="color-strip">
+  <div class="color-block red"></div>
+  <div class="color-block yellow"></div>
+  <div class="color-block purple"></div>
+  <div class="color-block blue"></div>
+</div>
+</div>-->
+
+ <div class="color-strip">
+ 
+</div>
+
+<section id="Manufacturing">
+
+
+
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+
+
+    <div class="stepper">
+      
+      <!-- Step 1: Weaving -->
+      <div class="step" >
+        <div class="step-image">
+          <img src="images/Manufacturing/weaving.jpg" alt="Weaving Process"></div>
+          
+        <div class="step-content" data-aos="fade-up" data-aos-duration="1000">
+          <h2 data-aos="fade-up" data-aos-duration="1000" >Weaving</h2>
+          <ul>
+            <li data-aos="fade-up" data-aos-duration="1000">Our weaving facilities are equiped with
+              <ul>
+                <li data-aos="fade-up" data-aos-duration="1000">High-speed shuttle less looms such as <strong>Airjet,Rapier and Projectile looms</strong> Designed for the efficient production of woven fabrics across various blends and construction, real-time monitoring and quality assurance protocals.
+                </li>
+                <li data-aos="fade-up" data-aos-duration="1000">
+                  Shuttle loom weaving facility with upgraded <strong>dobby Ruti-C looms</strong> to cater weaving of fine count High-twist Cotton Voiles.
+                </li>
+              </ul>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+
+      <!-- Step 2: Processing -->
+      <div class="step">
+        <div class="step-image-processing">
+          <img src="images/Manufacturing/process.jpg" alt="Processing Setup">
+        </div>
+        <div class="step-content" data-aos="fade-up" data-aos-duration="1000">
+          <h2 data-aos="fade-up" data-aos-duration="1000">Processing & Digital Printing</h2>
+          <ul>
+            
+            <li data-aos="fade-up" data-aos-duration="1000">At SPID, we specialize in producing premium quality fabrics tailored for the global export market. Our commitment to excellence is backed by robust backward integrations and cutting-edge processing facilities.
+            </li>
+            <li data-aos="fade-up" data-aos-duration="1000">State-of-the-Art Fabric Processing Includes:
+            <ul>
+             <li data-aos="fade-up" data-aos-duration="1000">Bleaching & Dyeing Capacity: Up to 1 Lakh meters per month.
+              <ul>
+                        <li data-aos="fade-up" data-aos-duration="1000">Versatile Processing Setup: Continuous and non-continuous bleaching and dyeing units, enabling us to efficiently manage both large-scale and short-run production</li>
+              </ul>
+             </li>
+
+      
+            
+             
+        <li data-aos="fade-up" data-aos-duration="1000">Advanced Digital Printing & Finishing: Cutting-edge technology delivering exceptional design clarity and lasting fabric durability.
+  <ul>
+    <li data-aos="fade-up" data-aos-duration="1000">High-resolution printing with intricate patterns, offering maximum flexibility and limitless color combinations.</li>
+    <li data-aos="fade-up" data-aos-duration="1000">Our <strong>Konica Minolta</strong> 72-head machine bring unparalleled vibrancy and precision, ensuring customer satisfaction and delight in the world of fashion.</li>
+  </ul>
+</li>
+         </ul>
+        </li>
+         <li data-aos="fade-up" data-aos-duration="1000">Technical Excellence
+          <ul>
+            <li data-aos="fade-up" data-aos-duration="1000"> Our in-house laboratory is equipped with the latest testing machines to assess fabric quality across all critical parameters.</li>
+            <li data-aos="fade-up" data-aos-duration="1000">We strictly adhere to international standards in all technical testing and quality control protocols.
+          </li>
+        </ul>
+         </li>
+
+         <li data-aos="fade-up" data-aos-duration="1000">Sustainability Commitment
+
+           <ul>
+            <li data-aos="fade-up" data-aos-duration="1000">We are dedicated to keeping our environment clean and green through responsible and eco-friendly practices across all operations.</li>
+             </ul>
+         </li>
+    
+         
+          
+        </div>
+      </div>
+
+      <!-- Step 3: Inspection & Packing -->
+      <div class="step">
+        <div class="step-image">
+          <img src="images\Manufacturing\inspection.jpg" alt="Inspection and Packing">
+        </div>
+        <div class="step-content" data-aos="fade-up" data-aos-duration="1000">
+          <h2 data-aos="fade-up" data-aos-duration="1000">Inspection & Packing</h2>
+          <ul>
+           <li data-aos="fade-up" data-aos-duration="1000">We prioritize quality assurance through rigorous inspection and packing processes tailored to meet our customer's specific needs.</li>
+           <li data-aos="fade-up" data-aos-duration="1000">We utilize advanced inspection machines capable of operating under 4-point grading system, as per customer requirements.</li>
+           <li data-aos="fade-up" data-aos-duration="1000">Our facility is fully equipped with rolling and <strong>lapping machines</strong> to ensure precision in fabric handling and packaging.</li>
+          
+           <li data-aos="fade-up" data-aos-duration="1000">As part of our internal quality protocol, we audit 10% of fabric from every lot ready for dispatch, reinforcing our commitment to delivering consistent and reliable quality.
+
+</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+
+
+
+
+  
+</section>
+
+
+
+
+<!--<div class="color-strip">
+  <div class="color-block red"></div>
+  <div class="color-block yellow"></div>
+  <div class="color-block purple"></div>
+  <div class="color-block blue"></div>
+</div> -->
+<div class="color-strip_footer"></div>
+<footer class="footer">
+  <div class="footer-container">
+  <img src="images/footer/A.jpg">
+  </div>
+</footer>
+
+<div class="footer-cr">
+  <p>&copy; 2025 4SPID. All Rights Reserved.</p>
+</div>
+
+  <script>
+  function revealOnScroll() {
+    const steps = document.querySelectorAll('.step');
+    const windowHeight = window.innerHeight;
+
+    steps.forEach((step, index) => {
+      const rect = step.getBoundingClientRect();
+      if (rect.top < windowHeight - 100) {  // Adjust trigger point if needed
+        step.classList.add('visible');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', revealOnScroll);
+  window.addEventListener('load', revealOnScroll);
+</script>
+
+<script src='animation.js'></script>
+<!-- AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SPID4</title>
+  <link rel="stylesheet" href="style.css" />
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baumans&family=Eagle+Lake&family=Estonia&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Saira:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/ui/1.14.1/jquery-ui.min.js"></script>
+
+<style>
+
+  body{
+    margin-top: 100px;
+
+  }
+  
+  .newspaper {
+  column-count: 3;
+  column-gap: 20px;
+  max-width: 2500px; /* Limits how wide it can grow */
+  margin: 0 auto;     /* Centers it horizontally */
+  padding: 0 2rem;    /* Adds space on left and right */
+}
+@media (max-width: 1024px) {
+  .newspaper {
+    column-count: 1;
+    padding: 0 1rem; /* smaller padding on smaller devices */
+  }
+}
+
+
+    .article {
+      break-inside: avoid;
+      margin-bottom: 20px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      transition: transform 0.8s;
+      background-color: #fff;
+    }
+
+
+    .article:hover {
+      transform: scale(1.03);
+    }
+
+    .article-header img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+    .article-header h2 {
+      font-size: 1.2rem;
+      color: #205781;
+       font-family: "Montserrat", sans-serif;
+       font-weight: 500;
+    }
+
+    .article-content {
+      display: none;
+      font-size: 0.95rem;
+    }
+    .event_head{
+
+    text-align: center;
+    color: #183B4E;
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin: 3rem 0 1.5rem;
+   
+   margin-bottom: 0.5rem; /* reduce space below heading */
+   margin-top:110px;
+ }
+
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.article{
+  opacity: 0;
+  transform: scale(0.85);
+  transition: all 0.8s ease;
+}
+
+.article.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+
+</style>
+
+
+  <script>
+    $(document).ready(function () {
+      $(".article-header").on('click', function () {
+        $(this).next('.article-content').slideToggle(300);
+      });
+    });
+  </script>
+
+</head>
+<body>
+
+ <div class="wrapper">
+  <header id="header">
+   
+     <div class="logo">
+          <img src="images\logoSPID.png"></div>
+    
+
+
+ <div class="nav_box">
+   <button class="hamburger" onclick="toggleMenu()">☰</button>
+    <nav class="navbar" id="navbar">
+      <a href="home.html">Home</a>
+      <div class="dropdown">
+        <span class="dropdown-label"  onclick="toggleDropdown(this)">About
+          <span class="arrow">&#9662;</span>
+        </span>
+
+        <div class="dropdown-content">
+          <a href="aboutUS.html#aboutspid">About Us</a>
+          <a href="aboutUS.html#Founders">Founders</a>
+          <a href="aboutUS.html#Achievements">Achievements</a>
+          <a href="aboutUS.html#Certificates">Certificates</a>
+        </div>
+      </div>
+    <div class="dropdown">
+  <span class="dropdown-label"  onclick="toggleDropdown(this)">Products
+    <span class="arrow">&#9662;</span>
+  </span>
+  <div class="dropdown-content">
+    <a href="Products.html#Fabrics">Fabrics </a>
+    <a href="Products.html#Trad">Traditional Wear</a>
+    <a href="Products.html#ApparelRange">Apparels</a>
+    <a href="Products.html#homeL">Home Linen</a>
+    <a href="Products.html#value">Value Addition</a>
+  </div>
+</div>
+
+      <a href="manufacturing.html">Manufacturing</a>
+     <a href="Studio.html">Studio</a>
+      <a href="markets.html">Global Reach</a>
+      <a href="Events.html">Events</a>
+      <a href="ContactUs.html">Contact Us</a>
+      
+    </nav>
+  </header>
+
+  <!--color strip option
+ <div class="color-strip">
+  <div class="color-block red"></div>
+  <div class="color-block yellow"></div>
+  <div class="color-block purple"></div>
+  <div class="color-block blue"></div>
+</div>
+</div>-->
+<main>
+ <div class="color-strip"></div>
+
+
+ <section id="Events">
+
+
+<br><br>
+    <div class="newspaper">
+        <section class="hidden"><div class="article">
+        <div class="article-header">
+          <img src="images/Events/event_r.webp" alt="Event 2">
+          <h2>Moscow 2023</h2>
+        </div>
+      
+      </div></section>
+
+      <section class="hidden"><div class="article">
+        <div class="article-header">
+          <img src="images/Events/event_mel.jpg" alt="MELBOURNE">
+          <h2>Melbourne 2024</h2>
+        </div>
+      </div>
+    </section>
+   <section class="hidden">     <div class="article">
+        <div class="article-header">
+          <img src="images/Events/event4.jpg" alt="Event 4">
+          <h2>London 2025</h2>
+        </div>
+      </div>
+       </section>
+    
+
+     <section class="hidden"> <div class="article">   
+        <div class="article-header">
+          <img src="images/Events/event_sy.webp" alt="SYDNEY 2024">
+          <h2>Sydney 2024</h2>
+        </div>
+      
+      </div>
+    </section>
+
+ <section class="hidden">
+  <div class="article">
+    <div class="article-header">
+      <img src="images/Events/event_usa.webp" alt="Las Vegas 2025">
+      <h2>Las Vegas 2025</h2>
+    </div>
+  </div>
+</section>
+
+<section class="hidden">
+  <div class="article">
+    <div class="article-header">
+      <img src="images/Events/event_por.jpg" alt="Portugal 2025">
+      <h2>Portugal 2025</h2>
+    </div>
+  </div>
+</section>
+
+
+
+ </main>
+<div class="color-strip_footer"></div>
+<footer class="footer">
+  <div class="footer-container">
+  <img src="images/footer/A.jpg">
+  </div>
+</footer>
+
+<div class="footer-cr">
+  <p>&copy; 2025 4SPID. All Rights Reserved.</p>
+</div>
+</div>
+
+
+<script>
+  function revealOnScroll() {
+    const steps = document.querySelectorAll('.article');
+    const windowHeight = window.innerHeight;
+
+    steps.forEach((step, index) => {
+      const rect = step.getBoundingClientRect();
+      if (rect.top < windowHeight - 100) {  // Adjust trigger point if needed
+        step.classList.add('visible');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', revealOnScroll);
+  window.addEventListener('load', revealOnScroll);
+</script>
+
+
+
+<script src="animation.js"></script>
+
+
+</body>
+</html>
+
+
