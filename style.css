@@ -50,7 +50,7 @@ main {
 .logo img {
   width: 250px;
   height: auto;
-  max-height: 80px;
+  max-height: 50px;
   object-fit: contain;
   background-color: transparent;
   display: block;
@@ -530,6 +530,7 @@ font-size: 10px;
     opacity: 1 ;
   }
 }
+
 
 
 
