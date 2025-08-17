@@ -441,7 +441,7 @@ a.active,
   height: 5px;
   width: 100%;
   position: fixed;
-  top: 100px;
+  
   z-index: 800;
   background: linear-gradient(to right, #E52020, #FBA518, #7E1891, #A6F1E0);
   transform-origin: left;
@@ -597,6 +597,7 @@ font-size: 10px;
     opacity: 1 ;
   }
 }
+
 
 
 
