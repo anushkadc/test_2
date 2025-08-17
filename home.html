@@ -3,8 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>SPID4 - Creative Textile Partner</title>
- 
+  <title>4SPID</title>
+
+<link rel="icon" type="image/png" sizes="32x32" href="images/headLogo_circle.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/headLogo_circle.png">
+
+<!-- For Safari pinned tabs -->
+<link rel="mask-icon" href="images/headLogo_circle.svg" color="#000000">
+
+<!-- For Apple devices (iPhone, iPad) -->
+<link rel="apple-touch-icon" sizes="180x180" href="images/headLogo_circle.png">
+
+<!-- Default Fallback -->
+<link rel="shortcut icon" href="images/headLogo_circle.ico" type="image/x-icon">
+
 
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -40,7 +52,7 @@ body * {
   height: 12px;
   width: 100%;
   position: fixed;
-  top: 100px;
+ 
   z-index: 800;
   background: linear-gradient(to right, #E52020, #FBA518, #7E1891, #A6F1E0);
 
@@ -49,7 +61,6 @@ body * {
   display: flex ; 
   height: 2px;
   width: 100%;
-
   z-index: 800;
   background: linear-gradient(to right, #E52020, #FBA518, #7E1891, #A6F1E0);
 
@@ -216,9 +227,6 @@ body * {
   opacity: 0;
   animation: fadeUp 1.2s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
 }
-.container-home {
-  margin-top: 112px;
-}
 
 /* Carousel base styling */
 .carousel-item {
@@ -242,11 +250,13 @@ body * {
     max-height: calc(100vh - 115px); /* Ensure no overflow */
   }
 
-  .container-home{
-    margin-top: 110px;
-  }
+  
 }
 
+
+
+@media (max-width: 768px) {
+}
 
     .hover-overlay {
       position: absolute;
@@ -287,7 +297,7 @@ body * {
 @media (max-width: 785px) {
 
   .hover-overlay p{
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   }
 }
 
