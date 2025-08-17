@@ -205,6 +205,20 @@ window.addEventListener('load', function () {
     }
   });
 
+////////////
+function setScrollPadding() {
+  const navbar = document.querySelector("header"); // or your navbar class
+  if (navbar) {
+    document.documentElement.style.scrollPaddingTop = navbar.offsetHeight + "px";
+  }
+}
+
+// Run on load & resize
+window.addEventListener("load", setScrollPadding);
+window.addEventListener("resize", setScrollPadding);
+
+
+
 
 
 
